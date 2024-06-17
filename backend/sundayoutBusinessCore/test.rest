@@ -1,0 +1,48 @@
+POST http://127.0.0.1:8080/login
+Content-Type: application/json
+
+{"username": "ana", "password": "123passWk"}
+
+###
+
+POST http://127.0.0.1:8080/signup
+Content-Type: application/json
+
+{"firstName": "ana", "lastName": "narnia", "email": "ana.stefan1000@gmail.com", "role": "admin", "password": "1"}
+
+###
+
+GET http://127.0.0.1:8080/test_token
+Content-Type: application/json
+Authorization: Token 5e06031926fbc1988d1e0dcdfd165d4c9980fd3a
+
+{}
+
+###
+
+POST http://127.0.0.1:8080/create_restaurant
+Content-Type: multipart/form-data
+
+
+{"ownerId": "2", "name": "Tuya", "latitude": 44.47613, "longitude": 26.08908, 
+"photo": "@/Users/anastefan/Downloads/dmytro-davydenko-wrd6RfjvMjY-unsplash.jpg", 
+"isFavorite": true, "score": 9.9, "priceRange": "GRM", "hasAmbientMusic": true, 
+"hasInternet": true, "phoneNumber": "0763644215", "email": "ana.stefan1000@gmail.com", 
+"nrOfTables": 21, "nrOfGuests": 105, "description": "Choose an unconventional drink with a surprising taste", 
+"quote": "Enjoy a mix of elegance, flavor and creativity", 
+"phoneNumberEvents": "0763644215", "emailEvents": "ana.stefan1000@gmail.com",
+"cuisineTypes": [{"cuisine": "INT"}], "areas": [{"area": "IND"}, {"area": "OUT"}],
+"schedule": [{"day": "MON", "start_time": "11:00:00", "end_time": "22:00:00"}, 
+{"day": "TUE", "start_time": "11:00:00", "end_time": "22:00:00"},
+{"day": "WED", "start_time": "11:00:00", "end_time": "22:00:00"},
+{"day": "THU", "start_time": "11:00:00", "end_time": "22:00:00"},
+{"day": "FRI", "start_time": "10:00:00", "end_time": "23:59:59"},
+{"day": "SAT", "start_time": "10:00:00", "end_time": "23:59:59"},
+{"day": "SUN", "start_time": "10:00:00", "end_time": "23:59:59"}]}
+
+###
+
+GET http://127.0.0.1:8080/get_businesses
+Content-Type: application/json
+
+{}
